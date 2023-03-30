@@ -22,42 +22,42 @@ Stop and remove the containers
 $> docker compose down
 ```
 
--------
+---
  
 ### Docker Swarm 
 
 ```
 #Initilizes swarm environment 
-docker swarm init 
+$> docker swarm init 
 
 #Check the current state of the swarm with container information
-docker info 
+$> docker info 
 
 #View information of nodes in the swarm 
-docker node ls 
+$> docker node ls 
 
 #Create a service with the CLI
-docker service create --replicas {number of replicas} --name {service name} {image name} 
+$> docker service create --replicas {number of replicas} --name {service name} {image name} 
 
 #Create a service with docker-compose file
-docker stack deploy -c {docker-compose file name} {docker compose app name} 
+$> docker stack deploy -c {docker-compose file name} {docker compose app name} 
 
 #Scaling a service
-docker service scale {service name}={number of replicas}
+$> docker service scale {service name}={number of replicas}
 
 #Check for running services 
-docker service ls
+$> docker service ls
 
 #View state of worker nodes
-docker service ps {service name}
+$> docker service ps {service name}
 
 #Remove a service
-docker service rm {service name}
+$> docker service rm {service name}
 
 #Leave Swarm 
-docker swarm leave 
+$> docker swarm leave 
 
 #Leave swarm forcefully 
-docker swarm leave --force
+$> docker swarm leave --force
 ```
 
